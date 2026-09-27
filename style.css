@@ -231,6 +231,10 @@ header a {
   margin-top: auto;
 }
 
+#QuoteMobile {
+  display: none;
+}
+
 .Task {
   display: flex;
   align-items: center;
@@ -356,11 +360,62 @@ body.dark #Divider {
   }
 
   .SideBar {
-    width: 200px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 8px;
+    gap: 6px;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+
+  .SideBar > div,
+  .SideBar nav {
+    display: contents;
+  }
+
+  #Logo,
+  #Divider,
+  #Filters,
+  #Quote {
+    display: none;
+  }
+
+  .SideBar nav div {
+    padding: 4px 6px;
+    font-size: 12px;
+    gap: 6px;
   }
 
   main {
-    padding: 20px;
+    padding: 20px 20px 90px;
+  }
+
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .Greeting h1 {
+    font-size: 20px;
+  }
+
+  .Greeting h3 {
+    font-size: 13px;
+  }
+
+  #QuoteMobile {
+    display: block;
+    margin: 0 0 15px;
+    font-size: 13px;
+    opacity: 0.75;
+    text-align: center;
   }
 
   .AddTask {
@@ -372,6 +427,17 @@ body.dark #Divider {
     flex-direction: column;
     align-items: stretch;
     gap: 15px;
+  }
+
+  .TaskTabs {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .TaskTabs button {
+    flex: 1 1 calc(50% - 6px);
+    padding: 8px 6px;
+    font-size: 13px;
   }
 
   #SearchTask {
