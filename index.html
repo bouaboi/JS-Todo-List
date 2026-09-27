@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <title>To-Do-List</title>
+  </head>
+
+  <body>
+    <div class="App">
+      <aside class="SideBar">
+        <h1 id="Logo">
+          <i class="fa-solid fa-square-check"></i>
+          To Do
+        </h1>
+        <div>
+          <nav>
+            <div>
+              <i class="fa-solid fa-list-check"></i>
+              <span>All Tasks</span>
+              <span id="allTasks"></span>
+            </div>
+
+            <div>
+              <i class="fa-regular fa-circle"></i>
+              <span>Active</span>
+              <span id="activeTasks"></span>
+            </div>
+
+            <div>
+              <i class="fa-regular fa-circle-check"></i>
+              <span>Completed</span>
+              <span id="completedTasks"></span>
+            </div>
+          </nav>
+        </div>
+
+        <hr id="Divider" />
+
+        <div>
+          <h4 id="Filters">Filters</h4>
+
+          <nav>
+            <div>
+              <i class="fa-regular fa-star"></i>
+              Important <span id="importantTasks"></span>
+            </div>
+          </nav>
+        </div>
+
+        <i id="Quote">"Small Steps Make Big Progress."</i>
+      </aside>
+
+      <main>
+        <header>
+          <div class="Greeting">
+            <h1>Good morning!</h1>
+            <h3>Here's your to-do task lists ...</h3>
+          </div>
+
+          <div>
+            <div class="ThemeControls">
+              <a>
+                <i class="fa-regular fa-sun"></i>
+              </a>
+
+              <label class="ThemeToggle">
+                <input type="checkbox" />
+              </label>
+
+              <a>
+                <i class="fa-regular fa-moon"></i>
+              </a>
+            </div>
+          </div>
+        </header>
+
+        <div class="AddTask">
+          <div class="TaskInput">
+            <input type="text" id="AddNewTask" placeholder="Add a new task" />
+          </div>
+
+          <button type="button" id="Btn">+ Add</button>
+        </div>
+
+        <div class="TasksCtrl">
+          <div class="TaskTabs">
+            <button id="allTab">All</button>
+            <button id="activeTab">Active</button>
+            <button id="completedTab">Completed</button>
+            <button id="importantTab">Important</button>
+          </div>
+
+          <div class="SearchBox">
+            <input type="text" id="SearchTask" placeholder="Search Task" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+
+        <div class="TaskList"></div>
+      </main>
+    </div>
+  </body>
+</html>
