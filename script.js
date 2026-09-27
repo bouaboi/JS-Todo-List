@@ -185,6 +185,8 @@ function addNewTask(task, saveToLS = true) {
   }
 
   usertaskinput.value = "";
+
+  updateCounters();
 }
 const searchInput = document.getElementById("SearchTask");
 
